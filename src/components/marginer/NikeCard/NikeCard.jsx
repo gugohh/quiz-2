@@ -54,18 +54,55 @@ const BottomContainer = styled.div`
     flex: 0.8;
     padding: 0 1em;
 `
+const NikeText = styled.h1`
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    z-index: 10;
+    font-size: 76px;
+    font-weight: 900;
+`;
+const ShoesWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Shoes = styled(motion.div)`
+  width: auto;
+  height: 190px;
+  z-index: 99;
+  user-select: none;
+  margin-right: 3em;
+  margin-top: 4em; 
+  img {
+    width: auto;
+    height: 100%;
+    user-select: none;
+  }
+`;
+
+
+
 
 const NikeCard = (props) => {
 
     return (
         <CardContainer>
             <TopContainer>
-            <Circlewrapper>
-                <Circle />
-            </Circlewrapper>
+                <Circlewrapper>
+                    <Circle />
+                </Circlewrapper>
+                <ShoesWrapper>
+                    <Shoes></Shoes>
+                </ShoesWrapper>
+                <NikeText>NIKE AIR</NikeText>
             </TopContainer>
             <BottomContainer>
-            
+                bottom
             </BottomContainer>
         </CardContainer>
     )
