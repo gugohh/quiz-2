@@ -26,14 +26,29 @@ const Circlewrapper = styled.div`
     border-top-right-radius: 25px;
 `;
 
+const Circle = styled.div`
 
-const nikeCard = () => {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: -4.2em;
+    right: -10em;
+    z-index: 5;
+    background-color: #fbbe01;
+    border-radius: 50%;
+
+`;
+
+
+const NikeCard = (props) => {
 
     return (
-       <CardContainer>
-       
-       </CardContainer>
+        <CardContainer>
+            <Circlewrapper>
+                <Circle />
+            </Circlewrapper>
+        </CardContainer>
     )
 }
 
-export default nikeCard
+export default NikeCard
