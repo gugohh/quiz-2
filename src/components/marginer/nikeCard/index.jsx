@@ -16,6 +16,16 @@ const CardContainer = styled.div`
     cursor: grab;
 `;
 
+const Circlewrapper = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    border-top-right-radius: 25px;
+`;
+
 
 const nikeCard = () => {
 
