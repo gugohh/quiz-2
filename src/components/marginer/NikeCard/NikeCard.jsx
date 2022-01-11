@@ -38,15 +38,35 @@ const Circle = styled.div`
     border-radius: 50%;
 
 `;
+const TopContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1.2;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1em 15px;
+`;
 
+const BottomContainer = styled.div`
+    display: flex;
+    flex: 0.8;
+    padding: 0 1em;
+`
 
 const NikeCard = (props) => {
 
     return (
         <CardContainer>
+            <TopContainer>
             <Circlewrapper>
                 <Circle />
             </Circlewrapper>
+            </TopContainer>
+            <BottomContainer>
+            
+            </BottomContainer>
         </CardContainer>
     )
 }
