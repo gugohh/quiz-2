@@ -1,5 +1,6 @@
 import './App.css';
 import styled from 'styled-components'
+import NikeCard from './components/marginer/NikeCard/NikeCard'
 
 const AppContainer = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <AppContainer>
-
+      <NikeCard />
     </AppContainer>
   );
 }
