@@ -11,11 +11,18 @@ const DetailsContainer = styled.div`
   line-height: 1.4;
 `;
 
+const MediumText = styled.span`
+  font-size: 18px;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+`;
+
 const ShoesDetails = (props) => {
     return (
-        
+
         <DetailsContainer>
-        
+            <MediumText>AIR JORDAN 1 MID SE GC</MediumText>
         </DetailsContainer>
     )
 }
