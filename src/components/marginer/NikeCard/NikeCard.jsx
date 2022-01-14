@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { motion } from 'framer-motion';
 import AirJordanImg from "../../../assets/images/air-jordan-transparent.png"
 
 
@@ -72,7 +72,7 @@ const ShoesWrapper = styled.div`
   justify-content: center;
 `;
 
-const Shoes = styled.div`
+const Shoes = styled(motion.div)`
   width: auto;
   height: 190px;
   z-index: 99;
@@ -98,7 +98,7 @@ const NikeCard = (props) => {
                     <Circle />
                 </Circlewrapper>
                 <ShoesWrapper>
-                    <Shoes>
+                    <Shoes style={{rotate: "-23deg"}}>
                         <img src={AirJordanImg} alt="" />
                     </Shoes>
                 </ShoesWrapper>
