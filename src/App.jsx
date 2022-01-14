@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components'
-import NikeCard from './components/marginer/NikeCard/NikeCard'
+import NikeCard from './components/NikeCard/NikeCard'
 
 const AppContainer = styled.div`
   width: 100%;
