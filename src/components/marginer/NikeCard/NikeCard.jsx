@@ -63,7 +63,7 @@ const NikeText = styled.h1`
     font-size: 76px;
     font-weight: 900;
 `;
-const ShoesWrapper = styled(motion.div)`
+const ShoesWrapper = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -72,7 +72,7 @@ const ShoesWrapper = styled(motion.div)`
   justify-content: center;
 `;
 
-const Shoes = styled.div`
+const Shoes = styled(motion.div)`
   width: auto;
   height: 190px;
   z-index: 99;
