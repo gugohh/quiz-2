@@ -25,12 +25,22 @@ const SmallText = styled.span`
   text-transform: uppercase;
 `;
 
+const SpacedHorizontalContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const ShoesDetails = (props) => {
     return (
 
         <DetailsContainer>
             <SmallText>NIKE</SmallText>
-            <MediumText>AIR JORDAN 1 MID SE GC</MediumText>
+            <SpacedHorizontalContainer>
+                <MediumText>AIR JORDAN 1 MID SE GC</MediumText>
+
+            </SpacedHorizontalContainer>
         </DetailsContainer>
     )
 }
