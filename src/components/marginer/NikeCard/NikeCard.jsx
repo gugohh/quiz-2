@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import AirJordanImg from "../../../assets/images/air-jordan-transparent.png"
 
 
 const CardContainer = styled.div`
@@ -98,7 +99,7 @@ const NikeCard = (props) => {
                 </Circlewrapper>
                 <ShoesWrapper>
                     <Shoes>
-                        <img src="" alt="" />
+                        <img src={AirJordanImg} alt="" />
                     </Shoes>
                 </ShoesWrapper>
                 <NikeText>NIKE AIR</NikeText>
