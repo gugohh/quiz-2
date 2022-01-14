@@ -18,10 +18,18 @@ const MediumText = styled.span`
   text-transform: uppercase;
 `;
 
+const SmallText = styled.span`
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+`;
+
 const ShoesDetails = (props) => {
     return (
 
         <DetailsContainer>
+            <SmallText>NIKE</SmallText>
             <MediumText>AIR JORDAN 1 MID SE GC</MediumText>
         </DetailsContainer>
     )
