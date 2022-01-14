@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 
+import Marginer from "../Marginer/Marginer"
 
 const DetailsContainer = styled.div`
   width: 100%;
@@ -41,6 +42,7 @@ const ShoesDetails = (props) => {
                 <MediumText>AIR JORDAN 1 MID</MediumText>
                 <MediumText>460$</MediumText>
             </SpacedHorizontalContainer>
+            <Marginer direction="vertical" margin="1.2em" />
             <SpacedHorizontalContainer>
                 <MediumText>Your Next Shoes</MediumText>
             </SpacedHorizontalContainer>

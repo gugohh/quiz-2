@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
+
 import AirJordanImg from "../../assets/images/air-jordan-transparent.png"
-import ShoesDetails from "./ShoesDetails"
+import ShoesDetails from '../NikeCard/ShoesDetails'
+
 
 const CardContainer = styled.div`
     width: 285px;
