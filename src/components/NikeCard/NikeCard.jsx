@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
-import AirJordanImg from "../../../assets/images/air-jordan-transparent.png"
+import AirJordanImg from "../../assets/images/air-jordan-transparent.png"
 import ShoesDetails from "./ShoesDetails"
 
 const CardContainer = styled.div`

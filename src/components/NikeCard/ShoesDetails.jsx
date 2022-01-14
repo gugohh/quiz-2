@@ -38,8 +38,11 @@ const ShoesDetails = (props) => {
         <DetailsContainer>
             <SmallText>NIKE</SmallText>
             <SpacedHorizontalContainer>
-                <MediumText>AIR JORDAN 1 MID SE GC</MediumText>
+                <MediumText>AIR JORDAN 1 MID</MediumText>
                 <MediumText>460$</MediumText>
+            </SpacedHorizontalContainer>
+            <SpacedHorizontalContainer>
+                <MediumText>Your Next Shoes</MediumText>
             </SpacedHorizontalContainer>
         </DetailsContainer>
     )
