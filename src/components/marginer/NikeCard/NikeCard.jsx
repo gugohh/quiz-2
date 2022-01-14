@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import AirJordanImg from "../../../assets/images/air-jordan-transparent.png"
-
+import ShoesDetails from "./ShoesDetails"
 
 const CardContainer = styled.div`
     width: 285px;
@@ -98,14 +98,14 @@ const NikeCard = (props) => {
                     <Circle />
                 </Circlewrapper>
                 <ShoesWrapper>
-                    <Shoes style={{rotate: "-23deg"}}>
+                    <Shoes style={{ rotate: "-23deg" }}>
                         <img src={AirJordanImg} alt="" />
                     </Shoes>
                 </ShoesWrapper>
                 <NikeText>NIKE AIR</NikeText>
             </TopContainer>
             <BottomContainer>
-                bottom
+                <ShoesDetails />
             </BottomContainer>
         </CardContainer>
     )
