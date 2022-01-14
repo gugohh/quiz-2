@@ -98,7 +98,7 @@ const NikeCard = (props) => {
                     <Circle />
                 </Circlewrapper>
                 <ShoesWrapper>
-                    <Shoes style={{rotate: "-25deg"}}>
+                    <Shoes style={{rotate: "-23deg"}}>
                         <img src={AirJordanImg} alt="" />
                     </Shoes>
                 </ShoesWrapper>
