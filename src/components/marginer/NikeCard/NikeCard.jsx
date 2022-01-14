@@ -71,7 +71,7 @@ const ShoesWrapper = styled.div`
   justify-content: center;
 `;
 
-const Shoes = styled(motion.div)`
+const Shoes = styled.div`
   width: auto;
   height: 190px;
   z-index: 99;
@@ -97,7 +97,9 @@ const NikeCard = (props) => {
                     <Circle />
                 </Circlewrapper>
                 <ShoesWrapper>
-                    <Shoes></Shoes>
+                    <Shoes>
+                        <img src="" alt="" />
+                    </Shoes>
                 </ShoesWrapper>
                 <NikeText>NIKE AIR</NikeText>
             </TopContainer>
