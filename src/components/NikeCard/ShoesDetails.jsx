@@ -32,6 +32,24 @@ const SpacedHorizontalContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+const BuyButton = styled.button`
+  padding: 10px 16px;
+  background-color: #fbbe01;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  border: 3px solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 290ms ease-in-out;
+  border-radius: 8px;
+  &:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 3px solid #fbbe01;
+  }
+`;
 
 const ShoesDetails = (props) => {
     return (
@@ -45,6 +63,7 @@ const ShoesDetails = (props) => {
             <Marginer direction="vertical" margin="1.2em" />
             <SpacedHorizontalContainer>
                 <MediumText>Your Next Shoes</MediumText>
+                <BuyButton>BUY</BuyButton>
             </SpacedHorizontalContainer>
         </DetailsContainer>
     )
