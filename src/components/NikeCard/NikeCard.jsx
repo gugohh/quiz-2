@@ -105,20 +105,23 @@ const NikeCard = (props) => {
     const y = useMotionValue(0);
     const rotateX = useTransform(y, [-100, 100], [30, -30]);
     const rotateY = useTransform(x, [-100, 100], [-30, 30]);
-    
+
     return (
         <CardWrapper>
-            <CardContainer  style={{ x, y, rotateX, rotateY, z: 100 }}
-            drag
-            dragElastic={0.16}
-            dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-            whileTap={{ cursor: "grabbing" }}>
+            <CardContainer style={{ x, y, rotateX, rotateY, z: 100 }}
+                drag
+                dragElastic={0.16}
+                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+                whileTap={{ cursor: "grabbing" }}>
                 <TopContainer>
                     <Circlewrapper>
                         <Circle />
                     </Circlewrapper>
                     <ShoesWrapper>
-                        <Shoes style={{ rotate: "-23deg" }}>
+                        <Shoes style={{ x, y, rotateX, rotateY, rotate: "-25deg", z: 100000 }}
+                            drag
+                            dragElastic={0.12}
+                            whileTap={{ cursor: "grabbing" }}>
                             <img src={AirJordanImg} alt="" />
                         </Shoes>
                     </ShoesWrapper>
