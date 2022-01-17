@@ -1,12 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 import AirJordanImg from "../../assets/images/air-jordan-transparent.png"
 import ShoesDetails from '../NikeCard/ShoesDetails'
 
 
-const CardContainer = styled.div`
+const CardWrapper = styled.div`
+  width: 100%;
+  perspective: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const CardContainer = styled(motion.div)`
     width: 285px;
     height: 500px;
     display: flex;
@@ -23,7 +31,7 @@ const Circlewrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
+    min-width: 91%;
     min-height: 100%;
     overflow: hidden;
     border-top-right-radius: 25px;
@@ -32,7 +40,7 @@ const Circlewrapper = styled.div`
 const Circle = styled.div`
 
     position: absolute;
-    width: 350px;
+    width: 334px;
     height: 350px;
     top: -4.2em;
     right: -10em;
@@ -93,23 +101,37 @@ const Shoes = styled(motion.div)`
 
 const NikeCard = (props) => {
 
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+    const rotateX = useTransform(y, [-100, 100], [30, -30]);
+    const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+
     return (
-        <CardContainer>
-            <TopContainer>
-                <Circlewrapper>
-                    <Circle />
-                </Circlewrapper>
-                <ShoesWrapper>
-                    <Shoes style={{ rotate: "-23deg" }}>
-                        <img src={AirJordanImg} alt="" />
-                    </Shoes>
-                </ShoesWrapper>
-                <NikeText>NIKE AIR</NikeText>
-            </TopContainer>
-            <BottomContainer>
-                <ShoesDetails />
-            </BottomContainer>
-        </CardContainer>
+        <CardWrapper>
+            <CardContainer style={{ x, y, rotateX, rotateY, z: 100 }}
+                drag
+                dragElastic={0.16}
+                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+                whileTap={{ cursor: "grabbing" }}>
+                <TopContainer>
+                    <Circlewrapper>
+                        <Circle />
+                    </Circlewrapper>
+                    <ShoesWrapper>
+                        <Shoes style={{ x, y, rotateX, rotateY, rotate: "-25deg", z: 100000 }}
+                            drag
+                            dragElastic={0.12}
+                            whileTap={{ cursor: "grabbing" }}>
+                            <img src={AirJordanImg} alt="" />
+                        </Shoes>
+                    </ShoesWrapper>
+                    <NikeText>NIKE AIR</NikeText>
+                </TopContainer>
+                <BottomContainer>
+                    <ShoesDetails />
+                </BottomContainer>
+            </CardContainer>
+        </CardWrapper>
     )
 }
 
