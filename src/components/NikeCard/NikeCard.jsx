@@ -14,7 +14,7 @@ const CardWrapper = styled.div`
   justify-content: center;
 `;
 
-const CardContainer = (motion.div)`
+const CardContainer = styled(motion.div)`
     width: 285px;
     height: 500px;
     display: flex;
