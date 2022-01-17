@@ -31,7 +31,7 @@ const Circlewrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
+    min-width: 91%;
     min-height: 100%;
     overflow: hidden;
     border-top-right-radius: 25px;
@@ -40,7 +40,7 @@ const Circlewrapper = styled.div`
 const Circle = styled.div`
 
     position: absolute;
-    width: 350px;
+    width: 334px;
     height: 350px;
     top: -4.2em;
     right: -10em;
