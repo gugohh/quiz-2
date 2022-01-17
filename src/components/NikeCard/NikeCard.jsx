@@ -6,7 +6,15 @@ import AirJordanImg from "../../assets/images/air-jordan-transparent.png"
 import ShoesDetails from '../NikeCard/ShoesDetails'
 
 
-const CardContainer = styled.div`
+const CardWrapper = styled.div`
+  width: 100%;
+  perspective: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const CardContainer = (motion.div)`
     width: 285px;
     height: 500px;
     display: flex;
@@ -94,22 +102,24 @@ const Shoes = styled(motion.div)`
 const NikeCard = (props) => {
 
     return (
-        <CardContainer>
-            <TopContainer>
-                <Circlewrapper>
-                    <Circle />
-                </Circlewrapper>
-                <ShoesWrapper>
-                    <Shoes style={{ rotate: "-23deg" }}>
-                        <img src={AirJordanImg} alt="" />
-                    </Shoes>
-                </ShoesWrapper>
-                <NikeText>NIKE AIR</NikeText>
-            </TopContainer>
-            <BottomContainer>
-                <ShoesDetails />
-            </BottomContainer>
-        </CardContainer>
+        <CardWrapper>
+            <CardContainer>
+                <TopContainer>
+                    <Circlewrapper>
+                        <Circle />
+                    </Circlewrapper>
+                    <ShoesWrapper>
+                        <Shoes style={{ rotate: "-23deg" }}>
+                            <img src={AirJordanImg} alt="" />
+                        </Shoes>
+                    </ShoesWrapper>
+                    <NikeText>NIKE AIR</NikeText>
+                </TopContainer>
+                <BottomContainer>
+                    <ShoesDetails />
+                </BottomContainer>
+            </CardContainer>
+        </CardWrapper>
     )
 }
 
