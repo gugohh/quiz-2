@@ -108,7 +108,11 @@ const NikeCard = (props) => {
     
     return (
         <CardWrapper>
-            <CardContainer style={{x, y, rotateX, rotateY , z:100}}>
+            <CardContainer  style={{ x, y, rotateX, rotateY, z: 100 }}
+            drag
+            dragElastic={0.16}
+            dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+            whileTap={{ cursor: "grabbing" }}>
                 <TopContainer>
                     <Circlewrapper>
                         <Circle />
