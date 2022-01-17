@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-
+import NikeImg from "../../assets/images/nike-logo.png";
 import Marginer from "../Marginer/Marginer"
 
 const DetailsContainer = styled.div`
@@ -51,6 +51,18 @@ const BuyButton = styled.button`
   }
 `;
 
+const NikeLogo = styled.div`
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: auto;
+    height: 13px;
+  }
+`;
+
 const ShoesDetails = (props) => {
     return (
 
@@ -65,6 +77,9 @@ const ShoesDetails = (props) => {
                 <MediumText>Your Next Shoes</MediumText>
                 <BuyButton>BUY</BuyButton>
             </SpacedHorizontalContainer>
+            <NikeLogo>
+              <img src={NikeImg} />
+            </NikeLogo>
         </DetailsContainer>
     )
 }
