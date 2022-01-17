@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-
+import NikeImg from "../../assets/images/nike-logo.png";
 import Marginer from "../Marginer/Marginer"
 
 const DetailsContainer = styled.div`
@@ -77,6 +77,9 @@ const ShoesDetails = (props) => {
                 <MediumText>Your Next Shoes</MediumText>
                 <BuyButton>BUY</BuyButton>
             </SpacedHorizontalContainer>
+            <NikeLogo>
+              <img src={NikeImg} />
+            </NikeLogo>
         </DetailsContainer>
     )
 }
