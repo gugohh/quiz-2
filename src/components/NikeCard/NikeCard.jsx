@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 import AirJordanImg from "../../assets/images/air-jordan-transparent.png"
 import ShoesDetails from '../NikeCard/ShoesDetails'
@@ -101,9 +101,14 @@ const Shoes = styled(motion.div)`
 
 const NikeCard = (props) => {
 
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+    const rotateX = useTransform(y, [-100, 100], [30, -30]);
+    const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+    
     return (
         <CardWrapper>
-            <CardContainer>
+            <CardContainer style={{x, y, rotateX, rotateY , z:100}}>
                 <TopContainer>
                     <Circlewrapper>
                         <Circle />
